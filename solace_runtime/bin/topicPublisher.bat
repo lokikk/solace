@@ -63,7 +63,7 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\solace-samples-jms.jar;%APP_HOME%\lib\sol-jms-10.5.0.jar;%APP_HOME%\lib\fscontext-4.6-b01.jar;%APP_HOME%\lib\commons-logging-1.1.3.jar;%APP_HOME%\lib\commons-lang-2.6.jar;%APP_HOME%\lib\org.osgi.annotation-6.0.0.jar;%APP_HOME%\lib\org.apache.servicemix.bundles.jzlib-1.0.7_2.jar;%APP_HOME%\lib\geronimo-jms_1.1_spec-1.1.1.jar
+set CLASSPATH=%APP_HOME%\lib\solace-samples-jms.jar;%APP_HOME%\lib\sol-jms-10.5.0.jar;%APP_HOME%\lib\fscontext-4.6-b01.jar;%APP_HOME%\lib\commons-logging-1.1.3.jar;%APP_HOME%\lib\commons-lang-2.6.jar;%APP_HOME%\lib\org.osgi.annotation-6.0.0.jar;%APP_HOME%\lib\org.apache.servicemix.bundles.jzlib-1.0.7_2.jar;%APP_HOME%\lib\geronimo-jms_1.1_spec-1.1.1.jar;%APP_HOME%\lib\bcprov-jdk15on-1.57.jar
 
 @rem Execute topicPublisher
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %TOPIC_PUBLISHER_OPTS%  -classpath "%CLASSPATH%" com.solace.samples.TopicPublisher %CMD_LINE_ARGS%
