@@ -1,0 +1,8 @@
+Search outgoing files in path (C:\Users\raulk\Documents\GitHub\solace\outgoing).Loading source file from: C:\Users\raulk\Documents\GitHub\solace\outgoinghcms_staff_info_20200123_hex.dat
+Exception in thread "main" java.io.FileNotFoundException: C:\Users\raulk\Documents\GitHub\solace\outgoinghcms_staff_info_20200123_hex.dat (The system cannot find the file specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at com.solace.samples.TopicPublisher.loadFile2String(TopicPublisher.java:180)
+	at com.solace.samples.TopicPublisher.run(TopicPublisher.java:96)
+	at com.solace.samples.TopicPublisher.main(TopicPublisher.java:170)
