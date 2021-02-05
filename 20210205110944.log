@@ -1,0 +1,46 @@
+Search outgoing files in path (C:\Users\raulk\Documents\GitHub\solace\outgoing).
+Loading source file from: C:\Users\raulk\Documents\GitHub\solace\outgoing\hcms_staff_info_20200123_hex.dat
+Writing String: 62B9B2079677CA2D04BCBCC869BDE914F2B64B8EADA3C032F42FE4F63A64E3CEA9C542C4FCE746CD33E5A0B971ECCE63048DE5DFDDC85F67ACC8C08A10D41FB9D539BB178EDB02CB0676D646435D29ADC847DDA1197D823632AC177E19815C07DE2A45AB75EBA9AB6EA876115E5CF16FDA023FF85FD06438D83741A8AAAB75D74537A86F86D1F663EECF091286540CE2482FCB39ED56A3527F005A6874C73DA96E29310A154A8BA99EDADC6CDD1B57EC22A72D39B11D3F970D29D679DB65DA34552746AC4835C7DBA9EEF7ECB2A450860AB677E7210BA16F3622C5D4030881197A8B4A70A2FEC2A683704553039FF378B64C259977F0BF8F09781637D62792412828729C2E35ECF951B7B64C2BC48264D9CE83C8DFC4DC79FF7AFB288D3C744CC3C0C9DF04FB87D858B984A1C0A27EEEDA81C8BCC0B15A60A297A479F5B5D5D63DEF3096CFEBE1C041733EDE94F65105D60E90EB3D4E78AC5E9795BEEA58561E51A290A82E2E1C5837BF66BCA8CF49750B2D7F3171CE2C81BA270FDC48848CD3E57DD77CE91BE026073BA647E1D6A38B into files: C:\Users\raulk\Documents\GitHub\solace\outgoing\hcms_staff_info_20200123_hex.dat_encrypted.dat
+Moved source file to archive folder: C:\Users\raulk\Documents\GitHub\solace\outgoing\processed\hcms_staff_info_20200123_hex.datTopicPublisher is connecting to Solace messaging at 10.20.30.40:5555...
+Feb 05, 2021 11:09:46 AM com.solacesystems.jcsmp.protocol.impl.TcpClientChannel call
+INFO: Connecting to host 'orig=tcp://10.20.30.40:5555, scheme=tcp://, host=10.20.30.40, port=5555' (host 1 of 1, smfclient 2, attempt 1 of 1, this_host_attempt: 1 of 1)
+Feb 05, 2021 11:10:07 AM com.solacesystems.jcsmp.protocol.impl.TcpClientChannel call
+INFO: Connection attempt failed to host '10.20.30.40' ConnectException com.solacesystems.jcsmp.JCSMPTransportException: (Client name: LAPTOP-U655C7D3/17856/#000c0001/WTLyFw_BhL   Local port: -1   Remote addr: 10.20.30.40:5555) - Error communicating with the router. cause: java.net.ConnectException: Connection timed out: no further information ((Client name: LAPTOP-U655C7D3/17856/#000c0001/WTLyFw_BhL   Local port: -1   Remote addr: 10.20.30.40:5555) - )
+Feb 05, 2021 11:10:10 AM com.solacesystems.jcsmp.protocol.impl.TcpClientChannel close
+INFO: Channel Closed (smfclient 2)
+Feb 05, 2021 11:10:10 AM com.solacesystems.jcsmp.protocol.impl.TcpClientChannel close
+INFO: Channel Closed (smfclient 2)
+Exception in thread "main" javax.jms.JMSException: Error creating connection - transport error ((Client name: LAPTOP-U655C7D3/17856/#000c0001/WTLyFw_BhL   Local port: -1   Remote addr: 10.20.30.40:5555) - Error communicating with the router.)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.solacesystems.jms.impl.JMSExceptionValue.newInstance(JMSExceptionValue.java:32)
+	at com.solacesystems.jms.impl.JCSMPExceptionMapper$ArrayListMapper.get(JCSMPExceptionMapper.java:31)
+	at com.solacesystems.jms.impl.JCSMPExceptionMapper.get(JCSMPExceptionMapper.java:94)
+	at com.solacesystems.jms.impl.Validator.createJMSException(Validator.java:582)
+	at com.solacesystems.jms.SolConnection.<init>(SolConnection.java:157)
+	at com.solacesystems.jms.SolConnection.<init>(SolConnection.java:86)
+	at com.solacesystems.jms.SolConnectionFactoryImpl.createConnection(SolConnectionFactoryImpl.java:112)
+	at com.solace.samples.TopicPublisher.run(TopicPublisher.java:122)
+	at com.solace.samples.TopicPublisher.main(TopicPublisher.java:186)
+Caused by: com.solacesystems.jcsmp.JCSMPTransportException: (Client name: LAPTOP-U655C7D3/17856/#000c0001/WTLyFw_BhL   Local port: -1   Remote addr: 10.20.30.40:5555) - Error communicating with the router.
+	at com.solacesystems.jcsmp.protocol.impl.TcpChannel.executePostOnce(TcpChannel.java:263)
+	at com.solacesystems.jcsmp.protocol.impl.ChannelOpStrategyClient.performOpen(ChannelOpStrategyClient.java:90)
+	at com.solacesystems.jcsmp.protocol.impl.TcpClientChannel.performOpenSingle(TcpClientChannel.java:416)
+	at com.solacesystems.jcsmp.protocol.impl.TcpClientChannel.access$800(TcpClientChannel.java:106)
+	at com.solacesystems.jcsmp.protocol.impl.TcpClientChannel$ClientChannelConnect.call(TcpClientChannel.java:2390)
+	at com.solacesystems.jcsmp.protocol.impl.TcpClientChannel.open(TcpClientChannel.java:392)
+	at com.solacesystems.jcsmp.impl.JCSMPBasicSession.sniffRouter(JCSMPBasicSession.java:354)
+	at com.solacesystems.jcsmp.impl.JCSMPBasicSession.connect(JCSMPBasicSession.java:1191)
+	at com.solacesystems.jms.SolConnection.<init>(SolConnection.java:138)
+	... 4 more
+Caused by: java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at sun.nio.ch.SocketAdaptor.connect(Unknown Source)
+	at com.solacesystems.jcsmp.protocol.smf.SimpleSmfClient.open(SimpleSmfClient.java:877)
+	at com.solacesystems.jcsmp.protocol.smf.SimpleSmfClient.doPostNoResponse(SimpleSmfClient.java:306)
+	at com.solacesystems.jcsmp.protocol.smf.SimpleSmfClient.doPost(SimpleSmfClient.java:223)
+	at com.solacesystems.jcsmp.protocol.impl.TcpChannel.executePostOnce(TcpChannel.java:208)
+	... 12 more
